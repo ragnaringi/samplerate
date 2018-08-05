@@ -42,7 +42,7 @@
 		C046152D2114E44700A160D7 /* libsamplerate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libsamplerate.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C04615582114E4AE00A160D7 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		C0D6D62D21171A2A000B1ED1 /* samplerate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = samplerate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C0D6D63021171A2A000B1ED1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0D6D65F21172105000B1ED1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0EA9AF22114E55D003F6FD5 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		C0EA9AF32114E55D003F6FD5 /* fastest_coeffs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fastest_coeffs.h; sourceTree = "<group>"; };
 		C0EA9AF42114E55D003F6FD5 /* float_cast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = float_cast.h; sourceTree = "<group>"; };
@@ -77,9 +77,9 @@
 		C04615242114E44700A160D7 = {
 			isa = PBXGroup;
 			children = (
+				C0D6D65F21172105000B1ED1 /* Info.plist */,
 				C04615582114E4AE00A160D7 /* config.h */,
 				C0EA9AF02114E55D003F6FD5 /* src */,
-				C0D6D62E21171A2A000B1ED1 /* samplerate */,
 				C046152E2114E44700A160D7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,14 +91,6 @@
 				C0D6D62D21171A2A000B1ED1 /* samplerate.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		C0D6D62E21171A2A000B1ED1 /* samplerate */ = {
-			isa = PBXGroup;
-			children = (
-				C0D6D63021171A2A000B1ED1 /* Info.plist */,
-			);
-			path = samplerate;
 			sourceTree = "<group>";
 		};
 		C0EA9AF02114E55D003F6FD5 /* src */ = {
@@ -402,7 +394,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Samplerate/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -429,7 +421,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Samplerate/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
