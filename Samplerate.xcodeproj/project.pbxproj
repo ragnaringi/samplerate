@@ -7,12 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0D6D63821171A62000B1ED1 /* libsamplerate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C046152D2114E44700A160D7 /* libsamplerate.a */; };
+		C0D6D63921171A86000B1ED1 /* samplerate.h in Headers */ = {isa = PBXBuildFile; fileRef = C0EA9AF82114E55D003F6FD5 /* samplerate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0EA9AFD2114E55E003F6FD5 /* samplerate.c in Sources */ = {isa = PBXBuildFile; fileRef = C0EA9AF72114E55D003F6FD5 /* samplerate.c */; };
 		C0EA9AFE2114E55E003F6FD5 /* src_linear.c in Sources */ = {isa = PBXBuildFile; fileRef = C0EA9AF92114E55D003F6FD5 /* src_linear.c */; };
 		C0EA9AFF2114E55E003F6FD5 /* src_sinc.c in Sources */ = {isa = PBXBuildFile; fileRef = C0EA9AFA2114E55D003F6FD5 /* src_sinc.c */; };
 		C0EA9B002114E55E003F6FD5 /* src_zoh.c in Sources */ = {isa = PBXBuildFile; fileRef = C0EA9AFB2114E55D003F6FD5 /* src_zoh.c */; };
 		C0EA9B022114E577003F6FD5 /* samplerate.h in Headers */ = {isa = PBXBuildFile; fileRef = C0EA9AF82114E55D003F6FD5 /* samplerate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C0D6D63521171A34000B1ED1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C04615252114E44700A160D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C046152C2114E44700A160D7;
+			remoteInfo = samplerate;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		C046152B2114E44700A160D7 /* CopyFiles */ = {
@@ -27,8 +39,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		C046152D2114E44700A160D7 /* libSamplerate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSamplerate.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C046152D2114E44700A160D7 /* libsamplerate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libsamplerate.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C04615582114E4AE00A160D7 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		C0D6D62D21171A2A000B1ED1 /* samplerate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = samplerate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0D6D63021171A2A000B1ED1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0EA9AF22114E55D003F6FD5 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		C0EA9AF32114E55D003F6FD5 /* fastest_coeffs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fastest_coeffs.h; sourceTree = "<group>"; };
 		C0EA9AF42114E55D003F6FD5 /* float_cast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = float_cast.h; sourceTree = "<group>"; };
@@ -49,6 +63,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C0D6D62921171A2A000B1ED1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0D6D63821171A62000B1ED1 /* libsamplerate.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -57,6 +79,7 @@
 			children = (
 				C04615582114E4AE00A160D7 /* config.h */,
 				C0EA9AF02114E55D003F6FD5 /* src */,
+				C0D6D62E21171A2A000B1ED1 /* samplerate */,
 				C046152E2114E44700A160D7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,9 +87,18 @@
 		C046152E2114E44700A160D7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C046152D2114E44700A160D7 /* libSamplerate.a */,
+				C046152D2114E44700A160D7 /* libsamplerate.a */,
+				C0D6D62D21171A2A000B1ED1 /* samplerate.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C0D6D62E21171A2A000B1ED1 /* samplerate */ = {
+			isa = PBXGroup;
+			children = (
+				C0D6D63021171A2A000B1ED1 /* Info.plist */,
+			);
+			path = samplerate;
 			sourceTree = "<group>";
 		};
 		C0EA9AF02114E55D003F6FD5 /* src */ = {
@@ -90,6 +122,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		C0D6D62A21171A2A000B1ED1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0D6D63921171A86000B1ED1 /* samplerate.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C0EA9B012114E571003F6FD5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -101,9 +141,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		C046152C2114E44700A160D7 /* SampleRate */ = {
+		C046152C2114E44700A160D7 /* libsamplerate */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C04615362114E44700A160D7 /* Build configuration list for PBXNativeTarget "SampleRate" */;
+			buildConfigurationList = C04615362114E44700A160D7 /* Build configuration list for PBXNativeTarget "libsamplerate" */;
 			buildPhases = (
 				C04615292114E44700A160D7 /* Sources */,
 				C046152A2114E44700A160D7 /* Frameworks */,
@@ -114,10 +154,29 @@
 			);
 			dependencies = (
 			);
-			name = SampleRate;
+			name = libsamplerate;
 			productName = SampleRate;
-			productReference = C046152D2114E44700A160D7 /* libSamplerate.a */;
+			productReference = C046152D2114E44700A160D7 /* libsamplerate.a */;
 			productType = "com.apple.product-type.library.static";
+		};
+		C0D6D62C21171A2A000B1ED1 /* samplerate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0D6D63221171A2A000B1ED1 /* Build configuration list for PBXNativeTarget "samplerate" */;
+			buildPhases = (
+				C0D6D62821171A2A000B1ED1 /* Sources */,
+				C0D6D62921171A2A000B1ED1 /* Frameworks */,
+				C0D6D62A21171A2A000B1ED1 /* Headers */,
+				C0D6D62B21171A2A000B1ED1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C0D6D63621171A34000B1ED1 /* PBXTargetDependency */,
+			);
+			name = samplerate;
+			productName = Samplerate;
+			productReference = C0D6D62D21171A2A000B1ED1 /* samplerate.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -131,9 +190,12 @@
 					C046152C2114E44700A160D7 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
+					C0D6D62C21171A2A000B1ED1 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
 				};
 			};
-			buildConfigurationList = C04615282114E44700A160D7 /* Build configuration list for PBXProject "Samplerate" */;
+			buildConfigurationList = C04615282114E44700A160D7 /* Build configuration list for PBXProject "samplerate" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -145,10 +207,21 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C046152C2114E44700A160D7 /* SampleRate */,
+				C046152C2114E44700A160D7 /* libsamplerate */,
+				C0D6D62C21171A2A000B1ED1 /* samplerate */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C0D6D62B21171A2A000B1ED1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C04615292114E44700A160D7 /* Sources */ = {
@@ -162,7 +235,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C0D6D62821171A2A000B1ED1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C0D6D63621171A34000B1ED1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C046152C2114E44700A160D7 /* libsamplerate */;
+			targetProxy = C0D6D63521171A34000B1ED1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C04615342114E44700A160D7 /* Debug */ = {
@@ -280,6 +368,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J96W95JQUZ;
+				EXECUTABLE_PREFIX = "";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "";
@@ -293,6 +382,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J96W95JQUZ;
+				EXECUTABLE_PREFIX = "";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "";
@@ -301,10 +391,64 @@
 			};
 			name = Release;
 		};
+		C0D6D63321171A2A000B1ED1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = J96W95JQUZ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Samplerate/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.reactify.Samplerate;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C0D6D63421171A2A000B1ED1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = J96W95JQUZ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Samplerate/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.reactify.Samplerate;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C04615282114E44700A160D7 /* Build configuration list for PBXProject "Samplerate" */ = {
+		C04615282114E44700A160D7 /* Build configuration list for PBXProject "samplerate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C04615342114E44700A160D7 /* Debug */,
@@ -313,11 +457,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C04615362114E44700A160D7 /* Build configuration list for PBXNativeTarget "SampleRate" */ = {
+		C04615362114E44700A160D7 /* Build configuration list for PBXNativeTarget "libsamplerate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C04615372114E44700A160D7 /* Debug */,
 				C04615382114E44700A160D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0D6D63221171A2A000B1ED1 /* Build configuration list for PBXNativeTarget "samplerate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0D6D63321171A2A000B1ED1 /* Debug */,
+				C0D6D63421171A2A000B1ED1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
