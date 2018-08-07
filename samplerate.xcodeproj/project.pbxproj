@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C0D6D63821171A62000B1ED1 /* libsamplerate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C046152D2114E44700A160D7 /* libsamplerate.a */; };
+		C073C36E2119EB6300127E93 /* samplerate.c in Sources */ = {isa = PBXBuildFile; fileRef = C0EA9AF72114E55D003F6FD5 /* samplerate.c */; };
+		C073C36F2119EB6700127E93 /* src_linear.c in Sources */ = {isa = PBXBuildFile; fileRef = C0EA9AF92114E55D003F6FD5 /* src_linear.c */; };
+		C073C3702119EB6900127E93 /* src_sinc.c in Sources */ = {isa = PBXBuildFile; fileRef = C0EA9AFA2114E55D003F6FD5 /* src_sinc.c */; };
+		C073C3712119EB6C00127E93 /* src_zoh.c in Sources */ = {isa = PBXBuildFile; fileRef = C0EA9AFB2114E55D003F6FD5 /* src_zoh.c */; };
 		C0D6D63921171A86000B1ED1 /* samplerate.h in Headers */ = {isa = PBXBuildFile; fileRef = C0EA9AF82114E55D003F6FD5 /* samplerate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0EA9AFD2114E55E003F6FD5 /* samplerate.c in Sources */ = {isa = PBXBuildFile; fileRef = C0EA9AF72114E55D003F6FD5 /* samplerate.c */; };
 		C0EA9AFE2114E55E003F6FD5 /* src_linear.c in Sources */ = {isa = PBXBuildFile; fileRef = C0EA9AF92114E55D003F6FD5 /* src_linear.c */; };
@@ -15,16 +18,6 @@
 		C0EA9B002114E55E003F6FD5 /* src_zoh.c in Sources */ = {isa = PBXBuildFile; fileRef = C0EA9AFB2114E55D003F6FD5 /* src_zoh.c */; };
 		C0EA9B022114E577003F6FD5 /* samplerate.h in Headers */ = {isa = PBXBuildFile; fileRef = C0EA9AF82114E55D003F6FD5 /* samplerate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		C0D6D63521171A34000B1ED1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C04615252114E44700A160D7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C046152C2114E44700A160D7;
-			remoteInfo = samplerate;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		C046152B2114E44700A160D7 /* CopyFiles */ = {
@@ -67,7 +60,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0D6D63821171A62000B1ED1 /* libsamplerate.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,7 +155,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				C0D6D63621171A34000B1ED1 /* PBXTargetDependency */,
 			);
 			name = samplerate;
 			productName = Samplerate;
@@ -231,18 +222,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C073C3702119EB6900127E93 /* src_sinc.c in Sources */,
+				C073C36E2119EB6300127E93 /* samplerate.c in Sources */,
+				C073C3712119EB6C00127E93 /* src_zoh.c in Sources */,
+				C073C36F2119EB6700127E93 /* src_linear.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C0D6D63621171A34000B1ED1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C046152C2114E44700A160D7 /* libsamplerate */;
-			targetProxy = C0D6D63521171A34000B1ED1 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C04615342114E44700A160D7 /* Debug */ = {
@@ -394,6 +381,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = NO;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = J96W95JQUZ;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -409,6 +397,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.reactify.Samplerate;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -421,6 +410,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = NO;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = J96W95JQUZ;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -436,6 +426,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.reactify.Samplerate;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
